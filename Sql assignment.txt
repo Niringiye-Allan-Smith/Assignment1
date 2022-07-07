@@ -1,0 +1,7 @@
+--Number1
+--Write a querry that returns five movies with  the highest rating  
+ SELECT title FROM ratings JOIN shows ON shows.id=ratings.show_id ORDER BY rating DESC LIMIT 5;
+
+--Number 2
+--Write a querry that returns the genres that of the movies acted by Robert Downey Jr
+ SELECT genre FROM people JOIN stars ON people.id = stars.person_id JOIN genres ON shows.id=genres.show_id JOIN shows ON shows.id = stars.show_id WHERE people.name LIKE "%Robert Downey%";
